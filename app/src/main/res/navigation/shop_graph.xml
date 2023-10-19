@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.interiorvisioniv.fragments.shop.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_casaItalianaFragment"
+            app:destination="@id/casaItalianaFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_modelMiselloFragment"
+            app:destination="@id/modelMiselloFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_dolceVitaFragment"
+            app:destination="@id/dolceVitaFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_romaRusticoFragment"
+            app:destination="@id/romaRusticoFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_bellaSognoFragment"
+            app:destination="@id/bellaSognoFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_mondoDesignFragment"
+            app:destination="@id/mondoDesignFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.interiorvisioniv.fragments.shop.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.interiorvisioniv.fragments.shop.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.interiorvisioniv.fragments.shop.FavoritesFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/casaItalianaFragment"
+        android:name="com.example.interiorvisioniv.fragments.stores.CasaItalianaFragment"
+        android:label="fragment_casa_italiana"
+        tools:layout="@layout/fragment_casa_italiana" />
+    <fragment
+        android:id="@+id/modelMiselloFragment"
+        android:name="com.example.interiorvisioniv.fragments.stores.ModelMiselloFragment"
+        android:label="fragment_model_misello"
+        tools:layout="@layout/fragment_model_misello" />
+    <fragment
+        android:id="@+id/dolceVitaFragment"
+        android:name="com.example.interiorvisioniv.fragments.stores.DolceVitaFragment"
+        android:label="fragment_dolce_vita"
+        tools:layout="@layout/fragment_dolce_vita" />
+    <fragment
+        android:id="@+id/romaRusticoFragment"
+        android:name="com.example.interiorvisioniv.fragments.stores.RomaRusticoFragment"
+        android:label="fragment_roma_rustico"
+        tools:layout="@layout/fragment_roma_rustico" />
+    <fragment
+        android:id="@+id/bellaSognoFragment"
+        android:name="com.example.interiorvisioniv.fragments.stores.BellaSognoFragment"
+        android:label="fragment_bella_sogno"
+        tools:layout="@layout/fragment_bella_sogno" />
+    <fragment
+        android:id="@+id/mondoDesignFragment"
+        android:name="com.example.interiorvisioniv.fragments.stores.MondoDesignFragment"
+        android:label="fragment_mondo_design"
+        tools:layout="@layout/fragment_mondo_design" />
+</navigation>
