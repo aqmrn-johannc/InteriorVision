@@ -12,14 +12,13 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-//import androidx.fragment.app.viewModels
 import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.activities.ShopActivity
 import com.example.interiorvisioniv.databinding.FragmentLoginBinding
 import com.example.interiorvisioniv.helper.DBHelper
 
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
     private lateinit var binding: FragmentLoginBinding
 
     private lateinit var email: EditText
@@ -61,10 +60,10 @@ class LoginFragment : Fragment() {
                 Toast.makeText(requireContext(), "Field/s cannot be empty", Toast.LENGTH_SHORT).show()
             }
             else if (!isEmailValid(email)) {
-            Toast.makeText(requireContext(), "Invalid email address", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Invalid email address", Toast.LENGTH_SHORT).show()
             }
             else if (password.length < 6) {
-            Toast.makeText(requireContext(), "Password should be at least 6 characters long", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Password should be at least 6 characters long", Toast.LENGTH_SHORT).show()
             }
             else {
                 val checkUser = db.checkUser(email, password)
