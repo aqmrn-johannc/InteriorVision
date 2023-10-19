@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.interiorvisioniv.R
+import com.example.interiorvisioniv.data.User
 import com.example.interiorvisioniv.databinding.FragmentRegisterBinding
 import com.example.interiorvisioniv.helper.DBHelper
 
@@ -60,7 +61,6 @@ class RegisterFragment : Fragment() {
             val email = email.text.toString().trim()
             val password = password.text.toString()
             val confirmPassword = confirmPassword.text.toString()
-            val savedData = db.insertUserData(name, email, password)
 
             if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confirmPassword)) {
                 Toast.makeText(requireContext(), "Field/s cannot be empty", Toast.LENGTH_SHORT).show()
@@ -73,6 +73,8 @@ class RegisterFragment : Fragment() {
             }
             else {
                 if (password == confirmPassword) {
+                    val user = User(name, email, password)
+                    val savedData = db.insertUserData(user)
                     if (savedData) {
                         Toast.makeText(requireContext(), "Sign up successful", Toast.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.action_registerFragment_to_loginFragment)

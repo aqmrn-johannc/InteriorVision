@@ -1,14 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.shop.ProfileFragment">
+    android:background="@android:color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvProfile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="330dp"
+        app:cardBackgroundColor="#653DAC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-25dp"
+        app:cardCornerRadius="30dp">
 
-</FrameLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/akshuali"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="240dp"
+            android:text="User's Name"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/altersan_bold"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="7"
+            android:shadowRadius="15"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/myPurchasesLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/cvProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/purchases"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/myPurchasesButton"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="My Purchases"
+            android:textSize="19sp"
+            android:textAlignment="textStart"
+            android:textColor="#636363"
+            android:fontFamily="@font/altersan"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myLikesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/myPurchasesLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/love"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/myLikesButton"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="My Likes"
+            android:textSize="19sp"
+            android:textAlignment="textStart"
+            android:textColor="#636363"
+            android:fontFamily="@font/altersan"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myAccountSettingsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/myLikesLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/settings"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/myAccountSettingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="Account Settings"
+            android:textSize="19sp"
+            android:textAlignment="textStart"
+            android:textColor="#636363"
+            android:fontFamily="@font/altersan"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/helpCentreLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/myAccountSettingsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/discussion"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/helpCentreButton"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="Help Centre"
+            android:textSize="19sp"
+            android:textAlignment="textStart"
+            android:textColor="#636363"
+            android:fontFamily="@font/altersan"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aboutUsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/helpCentreLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/info"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/aboutUsButton"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="About Us"
+            android:textSize="19sp"
+            android:textAlignment="textStart"
+            android:textColor="#636363"
+            android:fontFamily="@font/altersan"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgLogOut"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="35dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
