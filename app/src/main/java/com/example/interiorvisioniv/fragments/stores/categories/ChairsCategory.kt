@@ -1,4 +1,7 @@
 package com.example.interiorvisioniv.fragments.stores.categories
 
-class ChairsCategory: BaseCategory() {
+import androidx.fragment.app.Fragment
+import com.example.interiorvisioniv.R
+
+class ChairsCategory: Fragment(R.layout.fragment_chairs) {
 }
