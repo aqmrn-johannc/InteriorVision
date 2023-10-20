@@ -71,6 +71,29 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 
         return true
     }
 
+    fun checkEmailValidate(email: String): Boolean {
+        val db = this.writableDatabase
+        val query = "SELECT * FROM $TABLE_USERDATA WHERE $COL_EMAIL = '$email'"
+        val cursor = db.rawQuery(query, null)
+        if (cursor.count <= 0) {
+            cursor.close()
+            return false
+        }
+        cursor.close()
+        return true
+    }
+
+    fun updatePass(email: String, password: String): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(COL_PASSWORD, password)
+
+        val result = db.update(TABLE_USERDATA, contentValues, "$COL_EMAIL = ?", arrayOf(email))
+        db.close()
+
+        return result != -1
+    }
+
     fun insertFurniture(category: String, name: String, details: String, imagePath: String): Boolean {
         val db = this.writableDatabase
         val contentValues = ContentValues()

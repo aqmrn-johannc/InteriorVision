@@ -40,7 +40,14 @@
         android:id="@+id/profileFragment"
         android:name="com.example.interiorvisioniv.fragments.shop.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_helpCenterFragment"
+            app:destination="@id/helpCenterFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.interiorvisioniv.fragments.shop.FavoritesFragment"
@@ -66,4 +73,22 @@
         android:name="com.example.interiorvisioniv.fragments.stores.RomaRusticoFragment"
         android:label="fragment_roma_rustico"
         tools:layout="@layout/fragment_roma_rustico" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.interiorvisioniv.fragments.profilePage.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" >
+        <action
+            android:id="@+id/action_aboutUsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpCenterFragment"
+        android:name="com.example.interiorvisioniv.fragments.profilePage.HelpCenterFragment"
+        android:label="fragment_help_center"
+        tools:layout="@layout/fragment_help_center" >
+        <action
+            android:id="@+id/action_helpCenterFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.activities.LoginRegisterActivity
 import com.example.interiorvisioniv.activities.ShopActivity
@@ -44,6 +45,14 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             editor.apply()
             var intent = Intent(requireActivity(), LoginRegisterActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.aboutUsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_aboutUsFragment)
+        }
+
+        binding.helpCentreButton.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_helpCenterFragment)
         }
     }
 }

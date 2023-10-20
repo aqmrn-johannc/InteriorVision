@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3D1B77"
+    tools:context=".fragments.profilePage.AboutUsFragment">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="-10dp"
+        app:cardBackgroundColor="#3D1B77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="35dp"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_button_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Name"
+                android:textSize="35sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan_bold"
+                android:layout_marginTop="60dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque vel augue a turpis tincidunt fringilla. Vivamus sed justo sit amet neque tristique laoreet."
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvAboutUs"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/akshuali"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="3dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#FFF"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/altersan_bold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/akshuali"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#FFF"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/altersan_bold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/akshuali"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#FFF"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/altersan_bold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/akshuali"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#FFF"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/altersan_bold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/akshuali"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#FFF"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="25sp"
+                android:fontFamily="@font/altersan_bold"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textSize="15sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

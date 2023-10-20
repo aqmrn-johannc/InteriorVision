@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.loginregister.ForgotPasswordFragment"
-    android:background="@drawable/loginbg">
+    android:background="@drawable/loginbg"
+    tools:context=".fragments.loginregister.ResetPassFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -42,30 +42,73 @@
         android:contentDescription="backButton" />
 
     <TextView
-        android:id="@+id/tvForgotPassText"
+        android:id="@+id/tvName"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Enter your email"
+        android:text="Email"
         android:textSize="30sp"
-        android:textStyle="bold"
         android:textColor="#FFDCDC"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:shadowColor="#000000"
         android:shadowDx="7"
         android:shadowDy="7"
         android:shadowRadius="15"
         android:fontFamily="@font/altersan_semibold"/>
 
+    <TextView
+        android:id="@+id/tvEnterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Password"
+        android:textSize="13sp"
+        android:fontFamily="@font/altersan"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"/>
+
     <EditText
-        android:id="@+id/etEmailReset"
+        android:id="@+id/etPassword"
         android:layout_width="300dp"
         android:layout_height="45dp"
-        android:inputType="text"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/etlogin"
+        android:includeFontPadding="true"
+        android:inputType="textPassword"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="#707070"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEnterPassword" />
+
+    <TextView
+        android:id="@+id/tvReEnterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re-enter password"
+        android:textSize="13sp"
+        android:fontFamily="@font/altersan"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"/>
+
+    <EditText
+        android:id="@+id/etReEnterPassword"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:inputType="textPassword"
         android:includeFontPadding="true"
         android:paddingStart="25dp"
         android:paddingEnd="25dp"
@@ -73,24 +116,23 @@
         android:textColor="#707070"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/etlogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassText" />
+        app:layout_constraintTop_toBottomOf="@id/tvReEnterPassword"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnReset"
+        android:id="@+id/btnConfirm"
         android:layout_width="wrap_content"
         android:layout_height="40sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/altersan_semibold"
-        android:text="Reset Password"
+        android:text="Confirm"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:backgroundTint="#D52E2E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailReset" />
+        app:layout_constraintTop_toBottomOf="@+id/etReEnterPassword"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
