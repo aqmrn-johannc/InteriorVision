@@ -68,7 +68,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             else {
                 val checkUser = db.checkUser(email, password)
                 if (checkUser==true) {
-                    Toast.makeText(requireContext(), "You have successfully logged in", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Login Successful!", Toast.LENGTH_SHORT).show()
                     Intent(requireActivity(), ShopActivity::class.java).also { intent ->
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)

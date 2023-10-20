@@ -2,4 +2,75 @@
     <string name="app_name">InteriorVisionIV</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="casa1">CI Chair</string>
+    <string name="casa2">CI Chair</string>
+    <string name="casa3">CI Chair</string>
+    <string name="casa4">CI Chair</string>
+    <string name="casa5">CI Decor</string>
+    <string name="casa6">CI Decor</string>
+    <string name="casa7">CI Decor</string>
+    <string name="casa8">CI Decor</string>
+    <string name="casa9">CI Sofa</string>
+    <string name="casa10">CI Sofa</string>
+    <string name="casa11">CI Sofa</string>
+    <string name="casa12">CI Sofa</string>
+    <string name="casa13">CI Table</string>
+    <string name="casa14">CI Table</string>
+    <string name="casa15">CI Table</string>
+    <string name="casa16">CI Table</string>
+
+    <string name="dolce1">DV Chair</string>
+    <string name="dolce2">DV Chair</string>
+    <string name="dolce3">DV Chair</string>
+    <string name="dolce4">DV Chair</string>
+    <string name="dolce5">DV Decor</string>
+    <string name="dolce6">DV Decor</string>
+    <string name="dolce7">DV Decor</string>
+    <string name="dolce8">DV Decor</string>
+    <string name="dolce9">DV Sofa</string>
+    <string name="dolce10">DV Sofa</string>
+    <string name="dolce11">DV Sofa</string>
+    <string name="dolce12">DV Sofa</string>
+    <string name="dolce13">DV Table</string>
+    <string name="dolce14">DV Table</string>
+    <string name="dolce15">DV Table</string>
+    <string name="dolce16">DV Table</string>
+
+    <string name="model1">MM Chair</string>
+    <string name="model2">MM Chair</string>
+    <string name="model3">MM Chair</string>
+    <string name="model4">MM Chair</string>
+    <string name="model5">MM Decor</string>
+    <string name="model6">MM Decor</string>
+    <string name="model7">MM Decor</string>
+    <string name="model8">MM Decor</string>
+    <string name="model9">MM Sofa</string>
+    <string name="model10">MM Sofa</string>
+    <string name="model11">MM Sofa</string>
+    <string name="model12">MM Sofa</string>
+    <string name="model13">MM Table</string>
+    <string name="model14">MM Table</string>
+    <string name="model15">MM Table</string>
+    <string name="model16">MM Table</string>
+
+    <string name="roma1">RR Chair</string>
+    <string name="roma2">RR Chair</string>
+    <string name="roma3">RR Chair</string>
+    <string name="roma4">RR Chair</string>
+    <string name="roma5">RR Decor</string>
+    <string name="roma6">RR Decor</string>
+    <string name="roma7">RR Decor</string>
+    <string name="roma8">RR Decor</string>
+    <string name="roma9">RR Sofa</string>
+    <string name="roma10">RR Sofa</string>
+    <string name="roma11">RR Sofa</string>
+    <string name="roma12">RR Sofa</string>
+    <string name="roma13">RR Table</string>
+    <string name="roma14">RR Table</string>
+    <string name="roma15">RR Table</string>
+    <string name="roma16">RR Table</string>
+
+
+
 </resources>

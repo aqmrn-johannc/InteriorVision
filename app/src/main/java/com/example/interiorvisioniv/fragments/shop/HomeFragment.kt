@@ -42,22 +42,9 @@ class HomeFragment : Fragment() {
         }
 
         binding.apply {
-            bellasogno.setOnClickListener {
-                findNavController().navigate(R.id.action_homeFragment_to_bellaSognoFragment)
-            }
-        }
-
-        binding.apply {
             romarustico.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_romaRusticoFragment)
             }
         }
-
-        binding.apply {
-            mondodesign.setOnClickListener {
-                findNavController().navigate(R.id.action_homeFragment_to_mondoDesignFragment)
-            }
-        }
-
     }
 }
