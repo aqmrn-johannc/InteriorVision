@@ -1,6 +1,7 @@
 package com.example.interiorvisioniv.fragments.splash
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -13,6 +14,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.interiorvisioniv.R
+import com.example.interiorvisioniv.activities.ShopActivity
 
 class SplashFragment : Fragment() {
 
@@ -23,9 +25,16 @@ class SplashFragment : Fragment() {
 //         Inflate the layout for this fragment
         Handler(Looper.getMainLooper()).postDelayed({
 
-            if(onBoardingIsFinished()){
-                findNavController().navigate(R.id.action_splashFragment_to_accountOptionsFragment)
-            }else{
+            if (onBoardingIsFinished()) {
+                // Onboarding is finished
+                if (userIsLoggedIn()) {
+                    val intent = Intent(requireActivity(), ShopActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                } else {
+                    findNavController().navigate(R.id.action_splashFragment_to_accountOptionsFragment)
+                }
+            } else {
                 findNavController().navigate(R.id.action_splashFragment_to_onBoardingFragment)
             }
 
@@ -49,6 +58,11 @@ class SplashFragment : Fragment() {
 
         val sharedPreferences= requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         return sharedPreferences.getBoolean("finished", false)
+    }
+
+    private fun userIsLoggedIn(): Boolean {
+        val sharedPreferences = requireActivity().getSharedPreferences("Data", Context.MODE_PRIVATE)
+        return sharedPreferences.getBoolean("isLoggedIn", false)
     }
 
 }

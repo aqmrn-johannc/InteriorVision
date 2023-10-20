@@ -98,6 +98,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 
             val password = cursor.getString(cursor.getColumnIndexOrThrow(COL_PASSWORD))
 
             val user = User(id, name, email, password)
+            userList.add(user)
         }
         cursor.close()
         db.close()
