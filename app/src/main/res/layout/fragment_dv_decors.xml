@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.stores.categories.dolcevita.DVDecorsCategory"
-    android:background="#8F32EC">
+    tools:context=".fragments.stores.categories.dolcevita.DVDecorsCategory">
 
     <FrameLayout
         android:id="@+id/frame_layout"

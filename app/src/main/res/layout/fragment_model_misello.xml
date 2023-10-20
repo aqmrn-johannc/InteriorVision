@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.stores.ModelMiselloFragment"
-    android:background="@color/white">
+    android:background="@drawable/iv_bg">
 
     <LinearLayout
         android:baselineAligned="false"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="ModelMisello"
-                android:textColor="#6B1E78"
+                android:textColor="#FFFFFF"
                 android:textAlignment="center"
                 android:textSize="40sp"
                 android:fontFamily="@font/altersan_bold"/>
@@ -49,7 +49,7 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="30dp"
-                android:textColor="#51125C"/>
+                android:textColor="#FFFFFF"/>
 
 
 
@@ -59,15 +59,16 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:background="@color/white"
+        android:background="#6F2BCF"
         android:layout_width="match_parent"
         android:layout_height="25dp"
         app:tabRippleColor="@color/white"
-        app:tabSelectedTextColor="#BF55D1"
+        app:tabSelectedTextColor="#F2A6FF"
         app:tabTextAppearance="@style/tabLayout_text"
         app:layout_constraintTop_toBottomOf="@id/casaHeader"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabTextColor="@color/white"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"

@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.stores.categories.casaitaliana.CIAllCategory"
-    android:background="#EC32B7">
+    tools:context=".fragments.stores.categories.casaitaliana.CIAllCategory">
 
     <FrameLayout
         android:id="@+id/frame_layout"
@@ -20,7 +19,8 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/casa_all" />
+            tools:listitem="@layout/casa_all"
+            />
 
     </FrameLayout>
 
