@@ -6,13 +6,13 @@
     android:id="@+id/fragment_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@drawable/welcomebg">
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvProfile"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_height="230dp"
         app:cardBackgroundColor="#3D1B77"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:src="@drawable/akshuali"
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="2dp"
@@ -31,16 +31,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="100dp"/>
+            android:layout_marginTop="60dp"/>
 
         <TextView
             android:id="@+id/usernameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="170dp"
             android:text="USERNAME"
-            android:textSize="28sp"
+            android:textSize="25sp"
             android:textColor="@color/white"
             android:fontFamily="@font/altersan_bold"
             android:shadowColor="#000000"
@@ -65,8 +65,9 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/purchases"
-            android:layout_marginEnd="8dp"/>
+            android:src="@drawable/cart"
+            android:layout_marginEnd="8dp"
+            app:tint="#E6E6E6"/>
 
         <Button
             android:id="@+id/myPurchasesButton"
@@ -75,7 +76,7 @@
             android:text="My Purchases"
             android:textSize="19sp"
             android:textAlignment="textStart"
-            android:textColor="#1C1C1C"
+            android:textColor="#E6E6E6"
             android:fontFamily="@font/altersan_semibold"
             android:gravity="center"
             android:background="@android:color/transparent"
@@ -99,8 +100,9 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/love"
-            android:layout_marginEnd="8dp"/>
+            android:src="@drawable/heart"
+            android:layout_marginEnd="8dp"
+            app:tint="#E6E6E6"/>
 
         <Button
             android:id="@+id/myLikesButton"
@@ -109,7 +111,7 @@
             android:text="My Likes"
             android:textSize="19sp"
             android:textAlignment="textStart"
-            android:textColor="#1C1C1C"
+            android:textColor="#E6E6E6"
             android:fontFamily="@font/altersan_semibold"
             android:background="@android:color/transparent"
             android:gravity="center"
@@ -134,7 +136,8 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/settings"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            app:tint="#E6E6E6"/>
 
         <Button
             android:id="@+id/myAccountSettingsButton"
@@ -143,7 +146,7 @@
             android:text="Account Settings"
             android:textSize="19sp"
             android:textAlignment="textStart"
-            android:textColor="#1C1C1C"
+            android:textColor="#E6E6E6"
             android:fontFamily="@font/altersan_semibold"
             android:background="@android:color/transparent"
             android:gravity="center"
@@ -168,7 +171,8 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/discussion"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            app:tint="#E6E6E6"/>
 
         <Button
             android:id="@+id/helpCentreButton"
@@ -177,7 +181,7 @@
             android:text="Help Centre"
             android:textSize="19sp"
             android:textAlignment="textStart"
-            android:textColor="#1C1C1C"
+            android:textColor="#E6E6E6"
             android:fontFamily="@font/altersan_semibold"
             android:background="@android:color/transparent"
             android:gravity="center"
@@ -201,8 +205,9 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/info"
-            android:layout_marginEnd="8dp"/>
+            android:src="@drawable/group"
+            android:layout_marginEnd="8dp"
+            app:tint="#E6E6E6"/>
 
         <Button
             android:id="@+id/aboutUsButton"
@@ -211,7 +216,7 @@
             android:text="About Us"
             android:textSize="19sp"
             android:textAlignment="textStart"
-            android:textColor="#1C1C1C"
+            android:textColor="#E6E6E6"
             android:fontFamily="@font/altersan_semibold"
             android:background="@android:color/transparent"
             android:gravity="center"
@@ -225,9 +230,24 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:src="@drawable/logout"
+        app:tint="#E6E6E6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="35dp"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:textColor="@color/white"
+        android:fontFamily="@font/altersan"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/imgLogOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

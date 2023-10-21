@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#3D1B77"
+    android:background="@drawable/aboutus_bg"
     tools:context=".fragments.profilePage.AboutUsFragment">
 
 
@@ -22,8 +22,8 @@
 
         <ImageButton
             android:id="@+id/btnBack"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="35dp"
             android:layout_marginTop="35dp"
             android:background="#00000000"
@@ -40,24 +40,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Group Name"
-                android:textSize="35sp"
+                android:text="Gsosdisciples™"
+                android:textSize="30sp"
                 android:textColor="#FFF"
                 android:fontFamily="@font/altersan_bold"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="35dp"
                 android:layout_gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque vel augue a turpis tincidunt fringilla. Vivamus sed justo sit amet neque tristique laoreet."
+                android:text="      Gsosdiscples™ , is a student-organized group with five members in total. We banded together in order to develop Interior Vision, and to learn from the process itself which makes it beneficial for both users, and to us."
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"
                 android:textColor="#FFF"
                 android:fontFamily="@font/altersan"
                 android:justificationMode="inter_word"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center"/>
 
         </LinearLayout>
