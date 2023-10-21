@@ -72,5 +72,8 @@
     <string name="roma16">RR Table</string>
     <string name="hello">Hello</string>
 
+    <string name="visit_store"><u>Browse DolceVita™</u></string>
+    <string name="visit_store2"><u>Browse ModelMisello™</u></string>
+
 
 </resources>

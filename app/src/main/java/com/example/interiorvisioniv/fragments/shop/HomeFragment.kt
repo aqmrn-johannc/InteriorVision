@@ -46,5 +46,18 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.action_homeFragment_to_romaRusticoFragment)
             }
         }
+
+        binding.apply {
+            tvshopnow.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_modelMiselloFragment)
+            }
+        }
+
+        binding.apply {
+            tvshopnow2.setOnClickListener {
+                findNavController().navigate(R.id.action_homeFragment_to_dolceVitaFragment)
+            }
+        }
+
     }
 }

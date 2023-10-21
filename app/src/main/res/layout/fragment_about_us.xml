@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Gsosdiscples™ , is a student-organized group with five members in total. We banded together in order to develop Interior Vision, and to learn from the process itself which makes it beneficial for both users, and to us."
+                android:text="      Gsosdisciples™ , is a student-organized group with five members in total. We banded together in order to develop Interior Vision, and to learn from the process itself which makes it beneficial for both users, and to us."
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"
