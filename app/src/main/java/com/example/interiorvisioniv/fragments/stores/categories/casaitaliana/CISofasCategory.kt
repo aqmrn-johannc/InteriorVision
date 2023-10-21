@@ -48,17 +48,17 @@ class CISofasCategory: Fragment(R.layout.fragment_ci_sofas) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.sofa1,
+            R.drawable.sofa2,
+            R.drawable.sofa3,
+            R.drawable.sofa4
         )
 
         nameId = arrayOf(
-            getString(R.string.casa9),
-            getString(R.string.casa10),
-            getString(R.string.casa11),
-            getString(R.string.casa12)
+            "Tuxedo Sofa",
+            "Track Arm Lawson",
+            "Chesterfield Sofa",
+            "Lawson"
         )
 
         for (i in imageId.indices){

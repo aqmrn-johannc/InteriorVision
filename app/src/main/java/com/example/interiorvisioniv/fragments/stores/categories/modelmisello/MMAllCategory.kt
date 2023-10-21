@@ -48,41 +48,39 @@ class MMAllCategory: Fragment(R.layout.fragment_mm_allcategory) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1
+            R.drawable.vase4,
+            R.drawable.vase5,
+            R.drawable.plant4,
+            R.drawable.decorlamp3,
+            R.drawable.decorlamp4,
+            R.drawable.sectional3,
+            R.drawable.sectional4,
+            R.drawable.loveseat3,
+            R.drawable.loveseat4,
+            R.drawable.loveseat5,
+            R.drawable.coffeetable5,
+            R.drawable.consoletable4,
+            R.drawable.endtable3,
+            R.drawable.endtable4,
+            R.drawable.endtable5
         )
 
         nameId = arrayOf(
-            getString(R.string.model1),
-            getString(R.string.model2),
-            getString(R.string.model3),
-            getString(R.string.model4),
-            getString(R.string.model5),
-            getString(R.string.model6),
-            getString(R.string.model7),
-            getString(R.string.model8),
-            getString(R.string.model9),
-            getString(R.string.model10),
-            getString(R.string.model11),
-            getString(R.string.model12),
-            getString(R.string.model13),
-            getString(R.string.model14),
-            getString(R.string.model15),
-            getString(R.string.model16)
+            "Ancient Vase",
+            "Gilded Elegance Vase",
+            "Zen Skimmia",
+            "Opulent Marble Lamp",
+            "Botanical Lamp",
+            "Pottery Barn York Sofa",
+            "Chaise Sectional Sofa",
+            "18th Century Cozy Loveseat",
+            "Fritz Loveseat Sofa",
+            "Sofa Bed",
+            "Organizer's Brew Table",
+            "Batchelor's Legacy Console Table",
+            "Retasha End Table",
+            "Cage Wire End Table",
+            "Pebble End Table"
         )
 
         for (i in imageId.indices){

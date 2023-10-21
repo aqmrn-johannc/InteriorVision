@@ -48,17 +48,21 @@ class RRSofasCategory: Fragment(R.layout.fragment_rr_sofas) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.loveseat6,
+            R.drawable.loveseat7,
+            R.drawable.sectional5,
+            R.drawable.sectional6,
+            R.drawable.sofa6,
+            R.drawable.sofa7
         )
 
         nameId = arrayOf(
-            getString(R.string.roma9),
-            getString(R.string.roma10),
-            getString(R.string.roma11),
-            getString(R.string.roma12)
+            "Lawson",
+            "Mid-Century Modern Sofa",
+            "West Elm Haven",
+            "Pottery Barn Carmel Sofa",
+            "Mid-Century Sofa",
+            "Industrial Sofa"
         )
 
         for (i in imageId.indices){

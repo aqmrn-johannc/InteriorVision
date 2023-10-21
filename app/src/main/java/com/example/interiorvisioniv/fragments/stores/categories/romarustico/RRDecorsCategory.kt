@@ -48,17 +48,19 @@ class RRDecorsCategory: Fragment(R.layout.fragment_rr_decors) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.decorlamp5,
+            R.drawable.decorlamp6,
+            R.drawable.plant5,
+            R.drawable.plant6,
+            R.drawable.vase6
         )
 
         nameId = arrayOf(
-            getString(R.string.roma5),
-            getString(R.string.roma6),
-            getString(R.string.roma7),
-            getString(R.string.roma8)
+            "Minimalist Lava",
+            "Silhouette Lamp",
+            "Money Plant",
+            "Banana Plant",
+            "Porcelain China Vase"
         )
 
         for (i in imageId.indices){

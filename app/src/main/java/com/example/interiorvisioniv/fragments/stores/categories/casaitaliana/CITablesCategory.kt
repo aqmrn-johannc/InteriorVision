@@ -47,17 +47,17 @@ class CITablesCategory: Fragment(R.layout.fragment_ci_tables) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.endtable1,
+            R.drawable.endtable2,
+            R.drawable.consoletable1,
+            R.drawable.coffeetable1
         )
 
         nameId = arrayOf(
-            getString(R.string.casa13),
-            getString(R.string.casa14),
-            getString(R.string.casa15),
-            getString(R.string.casa16)
+            "Sakcham End Table",
+            "Retro Box End Table",
+            "Simple Console Table",
+            "Victorian Coffee Table"
         )
 
         for (i in imageId.indices){

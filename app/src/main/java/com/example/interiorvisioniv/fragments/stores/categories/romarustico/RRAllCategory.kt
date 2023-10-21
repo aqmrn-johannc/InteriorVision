@@ -48,41 +48,39 @@ class RRAllCategory: Fragment(R.layout.fragment_rr_allcategory) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1
+            R.drawable.decorlamp5,
+            R.drawable.decorlamp6,
+            R.drawable.plant5,
+            R.drawable.plant6,
+            R.drawable.vase6,
+            R.drawable.loveseat6,
+            R.drawable.loveseat7,
+            R.drawable.sectional5,
+            R.drawable.sectional6,
+            R.drawable.sofa6,
+            R.drawable.sofa7,
+            R.drawable.coffeetable6,
+            R.drawable.consoletable5,
+            R.drawable.consoletable6,
+            R.drawable.endtable7
         )
 
         nameId = arrayOf(
-            getString(R.string.roma1),
-            getString(R.string.roma2),
-            getString(R.string.roma3),
-            getString(R.string.roma4),
-            getString(R.string.roma5),
-            getString(R.string.roma6),
-            getString(R.string.roma7),
-            getString(R.string.roma8),
-            getString(R.string.roma9),
-            getString(R.string.roma10),
-            getString(R.string.roma11),
-            getString(R.string.roma12),
-            getString(R.string.roma13),
-            getString(R.string.roma14),
-            getString(R.string.roma15),
-            getString(R.string.roma16)
+            "Minimalist Lava",
+            "Silhouette Lamp",
+            "Money Plant",
+            "Banana Plant",
+            "Porcelain China Vase",
+            "Lawson",
+            "Mid-Century Modern Sofa",
+            "West Elm Haven",
+            "Pottery Barn Carmel Sofa",
+            "Mid-Century Sofa",
+            "Industrial Sofa",
+            "Retro '70s Coffee Table",
+            "Cabinet Console Table",
+            "Sleek Glass Finesse Console Table",
+            "Stylish Utility End Table"
         )
 
         for (i in imageId.indices){

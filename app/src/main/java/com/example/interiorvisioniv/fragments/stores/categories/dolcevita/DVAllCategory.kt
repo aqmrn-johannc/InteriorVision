@@ -48,41 +48,39 @@ class DVAllCategory: Fragment(R.layout.fragment_dv_allcategory) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1
+            R.drawable.chair5,
+            R.drawable.decorlamp1,
+            R.drawable.decorlamp2,
+            R.drawable.plant3,
+            R.drawable.vase3,
+            R.drawable.sofa5,
+            R.drawable.sectional1,
+            R.drawable.sectional2,
+            R.drawable.loveseat1,
+            R.drawable.loveseat2,
+            R.drawable.coffeetable2,
+            R.drawable.coffeetable3,
+            R.drawable.consoletable2,
+            R.drawable.consoletable3,
+            R.drawable.endtable6
         )
 
         nameId = arrayOf(
-            getString(R.string.dolce1),
-            getString(R.string.dolce2),
-            getString(R.string.dolce3),
-            getString(R.string.dolce4),
-            getString(R.string.dolce5),
-            getString(R.string.dolce6),
-            getString(R.string.dolce7),
-            getString(R.string.dolce8),
-            getString(R.string.dolce9),
-            getString(R.string.dolce10),
-            getString(R.string.dolce11),
-            getString(R.string.dolce12),
-            getString(R.string.dolce13),
-            getString(R.string.dolce14),
-            getString(R.string.dolce15),
-            getString(R.string.dolce16)
+            "Occasional Chair",
+            "LuxuryWood Illuminare",
+            "Charcoal Jungle Lamp",
+            "High Polymer Jade Plant",
+            "Cranes in Flight Duo Vases",
+            "Retro Sofa",
+            "Zin Home Sofa",
+            "JoyBird Sofa",
+            "English Roll Arm Loveseat Sofa",
+            "English Roll Arm Sofa",
+            "Haven Coffee Table",
+            "Wooden Circular Coffee Table",
+            "Design District Console Table",
+            "Shanxi Charm Console",
+            "Brithny End Table"
         )
 
         for (i in imageId.indices){

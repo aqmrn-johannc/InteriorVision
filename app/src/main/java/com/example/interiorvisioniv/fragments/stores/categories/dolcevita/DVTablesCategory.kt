@@ -47,17 +47,19 @@ class DVTablesCategory: Fragment(R.layout.fragment_dv_tables) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.coffeetable2,
+            R.drawable.coffeetable3,
+            R.drawable.consoletable2,
+            R.drawable.consoletable3,
+            R.drawable.endtable6
         )
 
         nameId = arrayOf(
-            getString(R.string.dolce13),
-            getString(R.string.dolce14),
-            getString(R.string.dolce15),
-            getString(R.string.dolce16)
+            "Haven Coffee Table",
+            "Wooden Circular Coffee Table",
+            "Design District Console Table",
+            "Shanxi Charm Console",
+            "Brithny End Table"
         )
 
         for (i in imageId.indices){

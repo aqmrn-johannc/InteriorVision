@@ -48,17 +48,11 @@ class DVChairsCategory: Fragment(R.layout.fragment_dv_chairs) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.chair5
         )
 
         nameId = arrayOf(
-            getString(R.string.dolce1),
-            getString(R.string.dolce2),
-            getString(R.string.dolce3),
-            getString(R.string.dolce4)
+            "Occasional Chair"
         )
 
         for (i in imageId.indices){

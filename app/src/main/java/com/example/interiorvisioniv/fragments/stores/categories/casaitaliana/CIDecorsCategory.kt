@@ -48,17 +48,17 @@ class CIDecorsCategory: Fragment(R.layout.fragment_ci_decors) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.vase1,
+            R.drawable.vase2,
+            R.drawable.plants1,
+            R.drawable.plants2
         )
 
         nameId = arrayOf(
-            getString(R.string.casa5),
-            getString(R.string.casa6),
-            getString(R.string.casa7),
-            getString(R.string.casa8)
+            "Rawscan Vase",
+            "Hydria Apotechary Vase",
+            "Potted Montsera Deliciosa",
+            "Prayer Plant"
         )
 
         for (i in imageId.indices){

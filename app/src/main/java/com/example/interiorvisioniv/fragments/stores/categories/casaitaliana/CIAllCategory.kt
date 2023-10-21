@@ -1,6 +1,7 @@
 package com.example.interiorvisioniv.fragments.stores.categories.casaitaliana
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,45 +44,45 @@ class CIAllCategory: Fragment(R.layout.fragment_ci_allcategory) {
 
     }
     private fun dataInitialize(){
-
+        Log.d("TAG", "Inside dataInitialize()")
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1
+            R.drawable.chair1,
+            R.drawable.chair2,
+            R.drawable.chair3,
+            R.drawable.chair4,
+            R.drawable.vase1,
+            R.drawable.vase2,
+            R.drawable.plants1,
+            R.drawable.plants2,
+            R.drawable.sofa1,
+            R.drawable.sofa2,
+            R.drawable.sofa3,
+            R.drawable.sofa4,
+            R.drawable.endtable1,
+            R.drawable.endtable2,
+            R.drawable.consoletable1,
+            R.drawable.coffeetable1
         )
 
         nameId = arrayOf(
-            getString(R.string.casa1),
-            getString(R.string.casa2),
-            getString(R.string.casa3),
-            getString(R.string.casa4),
-            getString(R.string.casa5),
-            getString(R.string.casa6),
-            getString(R.string.casa7),
-            getString(R.string.casa8),
-            getString(R.string.casa9),
-            getString(R.string.casa10),
-            getString(R.string.casa11),
-            getString(R.string.casa12),
-            getString(R.string.casa13),
-            getString(R.string.casa14),
-            getString(R.string.casa15),
-            getString(R.string.casa16)
+            "Berge Chair",
+            "Barrel Chair",
+            "Mid-Century Chair",
+            "Slipper Chair",
+            "Rawscan Vase",
+            "Hydria Apotechary Vase",
+            "Potted Montsera Deliciosa",
+            "Prayer Plant",
+            "Tuxedo Sofa",
+            "Track Arm Lawson",
+            "Chesterfield Sofa",
+            "Lawson",
+            "Sakcham End Table",
+            "Retro Box End Table",
+            "Simple Console Table",
+            "Victorian Coffee Table"
         )
 
         for (i in imageId.indices){

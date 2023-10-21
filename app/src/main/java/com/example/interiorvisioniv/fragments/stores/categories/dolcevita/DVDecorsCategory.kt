@@ -48,17 +48,17 @@ class DVDecorsCategory: Fragment(R.layout.fragment_dv_decors) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.decorlamp1,
+            R.drawable.decorlamp2,
+            R.drawable.plant3,
+            R.drawable.vase3
         )
 
         nameId = arrayOf(
-            getString(R.string.dolce5),
-            getString(R.string.dolce6),
-            getString(R.string.dolce7),
-            getString(R.string.dolce8)
+            "LuxuryWood Illuminare",
+            "Charcoal Jungle Lamp",
+            "High Polymer Jade Plant",
+            "Cranes in Flight Duo Vases"
         )
 
         for (i in imageId.indices){

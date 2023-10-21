@@ -47,17 +47,19 @@ class MMTablesCategory: Fragment(R.layout.fragment_mm_tables) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.coffeetable5,
+            R.drawable.consoletable4,
+            R.drawable.endtable3,
+            R.drawable.endtable4,
+            R.drawable.endtable5
         )
 
         nameId = arrayOf(
-            getString(R.string.model13),
-            getString(R.string.model14),
-            getString(R.string.model15),
-            getString(R.string.model16)
+            "Organizer's Brew Table",
+            "Batchelor's Legacy Console Table",
+            "Retasha End Table",
+            "Cage Wire End Table",
+            "Pebble End Table"
         )
 
         for (i in imageId.indices){

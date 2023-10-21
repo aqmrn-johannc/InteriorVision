@@ -20,6 +20,7 @@ import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.activities.LoginRegisterActivity
 import com.example.interiorvisioniv.activities.ShopActivity
 import com.example.interiorvisioniv.databinding.FragmentLoginBinding
+import com.example.interiorvisioniv.fragments.profilePage.AccountSettingsFragment
 import com.example.interiorvisioniv.helper.DBHelper
 
 
@@ -86,6 +87,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 val checkUser = db.checkUser(email, password)
                 Log.d("LoginFragment", "Email: $email, Password: $password")
                 if (checkUser) {
+                    val bundle = Bundle()
+                    bundle.putString("userEmail", email)
+                    val accountSettingsFragment = AccountSettingsFragment()
+                    accountSettingsFragment.arguments = bundle
+
                     if (binding.cbRememberMe.isChecked) {
                         editor.putString("email", email)
                         editor.putString("password", password)

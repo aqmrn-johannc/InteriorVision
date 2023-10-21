@@ -48,17 +48,19 @@ class DVSofasCategory: Fragment(R.layout.fragment_dv_sofas) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.sofa5,
+            R.drawable.sectional1,
+            R.drawable.sectional2,
+            R.drawable.loveseat1,
+            R.drawable.loveseat2
         )
 
         nameId = arrayOf(
-            getString(R.string.dolce9),
-            getString(R.string.dolce10),
-            getString(R.string.dolce11),
-            getString(R.string.dolce12)
+            "Retro Sofa",
+            "Zin Home Sofa",
+            "JoyBird Sofa",
+            "English Roll Arm Loveseat Sofa",
+            "English Roll Arm Sofa"
         )
 
         for (i in imageId.indices){

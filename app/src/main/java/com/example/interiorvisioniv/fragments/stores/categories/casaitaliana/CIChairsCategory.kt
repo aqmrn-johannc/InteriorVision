@@ -48,17 +48,17 @@ class CIChairsCategory: Fragment(R.layout.fragment_ci_chairs) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.chair1,
+            R.drawable.chair2,
+            R.drawable.chair3,
+            R.drawable.chair4,
         )
 
         nameId = arrayOf(
-            getString(R.string.casa1),
-            getString(R.string.casa2),
-            getString(R.string.casa3),
-            getString(R.string.casa4)
+            "Berge Chair",
+            "Barrel Chair",
+            "Mid-Century Chair",
+            "Slipper Chair"
         )
 
         for (i in imageId.indices){

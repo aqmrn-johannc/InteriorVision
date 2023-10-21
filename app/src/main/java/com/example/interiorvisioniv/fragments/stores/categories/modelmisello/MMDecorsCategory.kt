@@ -48,17 +48,19 @@ class MMDecorsCategory: Fragment(R.layout.fragment_mm_decors) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.vase4,
+            R.drawable.vase5,
+            R.drawable.plant4,
+            R.drawable.decorlamp3,
+            R.drawable.decorlamp4
         )
 
         nameId = arrayOf(
-            getString(R.string.model5),
-            getString(R.string.model6),
-            getString(R.string.model7),
-            getString(R.string.model8)
+            "Ancient Vase",
+            "Gilded Elegance Vase",
+            "Zen Skimmia",
+            "Opulent Marble Lamp",
+            "Botanical Lamp"
         )
 
         for (i in imageId.indices){

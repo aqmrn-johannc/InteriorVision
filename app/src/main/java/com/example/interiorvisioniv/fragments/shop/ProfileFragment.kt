@@ -54,5 +54,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         binding.helpCentreButton.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_helpCenterFragment)
         }
+
+        binding.myAccountSettingsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_accountSettingsFragment)
+        }
     }
 }

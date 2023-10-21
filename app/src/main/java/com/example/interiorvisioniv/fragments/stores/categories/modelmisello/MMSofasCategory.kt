@@ -48,17 +48,19 @@ class MMSofasCategory: Fragment(R.layout.fragment_mm_sofas) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.sectional3,
+            R.drawable.sectional4,
+            R.drawable.loveseat3,
+            R.drawable.loveseat4,
+            R.drawable.loveseat5
         )
 
         nameId = arrayOf(
-            getString(R.string.model9),
-            getString(R.string.model10),
-            getString(R.string.model11),
-            getString(R.string.model12)
+            "Pottery Barn York Sofa",
+            "Chaise Sectional Sofa",
+            "18th Century Cozy Loveseat",
+            "Fritz Loveseat Sofa",
+            "Sofa Bed"
         )
 
         for (i in imageId.indices){

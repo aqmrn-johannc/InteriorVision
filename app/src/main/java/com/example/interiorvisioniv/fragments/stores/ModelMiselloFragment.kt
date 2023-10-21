@@ -33,7 +33,7 @@ class ModelMiselloFragment : Fragment() {
 
         val categoriesFragments = arrayListOf<Fragment>(
             MMAllCategory(),
-            MMChairsCategory(),
+//            MMChairsCategory(),
             MMDecorsCategory(),
             MMSofasCategory(),
             MMTablesCategory()
@@ -45,10 +45,10 @@ class ModelMiselloFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager){tab,position ->
             when(position){
                 0 -> tab.text = "All"
-                1 -> tab.text = "Chairs"
-                2 -> tab.text = "Decors"
-                3 -> tab.text = "Sofas"
-                4 -> tab.text = "Tables"
+//                1 -> tab.text = "Chairs"
+                1 -> tab.text = "Decors"
+                2 -> tab.text = "Sofas"
+                3 -> tab.text = "Tables"
             }
         }.attach()
 

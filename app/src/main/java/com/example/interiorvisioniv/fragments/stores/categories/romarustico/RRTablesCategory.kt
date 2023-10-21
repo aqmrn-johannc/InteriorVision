@@ -47,17 +47,17 @@ class RRTablesCategory: Fragment(R.layout.fragment_rr_tables) {
         furnituresArrayList = arrayListOf<Furnitures>()
 
         imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
+            R.drawable.coffeetable6,
+            R.drawable.consoletable5,
+            R.drawable.consoletable6,
+            R.drawable.endtable7
         )
 
         nameId = arrayOf(
-            getString(R.string.roma13),
-            getString(R.string.roma14),
-            getString(R.string.roma15),
-            getString(R.string.roma16)
+            "Retro '70s Coffee Table",
+            "Cabinet Console Table",
+            "Sleek Glass Finesse Console Table",
+            "Stylish Utility End Table"
         )
 
         for (i in imageId.indices){

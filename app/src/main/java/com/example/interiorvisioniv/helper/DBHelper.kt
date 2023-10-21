@@ -94,6 +94,28 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 
         return result != -1
     }
 
+    fun updateName(currentEmail: String, newName: String): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(COL_USERNAME, newName)
+
+        val result = db.update(TABLE_USERDATA, contentValues, "$COL_EMAIL = ?", arrayOf(currentEmail))
+        db.close()
+
+        return result != -1
+    }
+
+    fun updateEmail(currentEmail: String, newEmail: String): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(COL_EMAIL, newEmail)
+
+        val result = db.update(TABLE_USERDATA, contentValues, "$COL_EMAIL = ?", arrayOf(currentEmail))
+        db.close()
+
+        return result != -1
+    }
+
     fun insertFurniture(category: String, name: String, details: String, imagePath: String): Boolean {
         val db = this.writableDatabase
         val contentValues = ContentValues()
