@@ -19,10 +19,7 @@ class CIChairsCategory: Fragment(R.layout.fragment_ci_chairs) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,38 +31,17 @@ class CIChairsCategory: Fragment(R.layout.fragment_ci_chairs) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
-    }
-    private fun dataInitialize(){
-
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.chair1,
-            R.drawable.chair2,
-            R.drawable.chair3,
-            R.drawable.chair4,
-        )
-
-        nameId = arrayOf(
-            "Berge Chair",
-            "Barrel Chair",
-            "Mid-Century Chair",
-            "Slipper Chair"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
+        furnituresArrayList.add(Furnitures("1", "Chair", R.drawable.chair1, "Berge Chair", 17800.00, "0"))
+        furnituresArrayList.add(Furnitures("2", "Chair", R.drawable.chair2, "Barrel Chair", 20875.00, "0"))
+        furnituresArrayList.add(Furnitures("3", "Chair", R.drawable.chair3, "Mid-Century Chair", 14057.30, "0"))
+        furnituresArrayList.add(Furnitures("4", "Chair", R.drawable.chair4, "Slipper Chair", 14404.34, "0"))
     }
 
 }

@@ -2,9 +2,9 @@ package com.example.interiorvisioniv.helper
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
 import com.example.interiorvisioniv.data.User
 
 val TAG = "DBHelper"
@@ -13,12 +13,13 @@ const val COL_USERID = "userID"
 const val COL_USERNAME = "name"
 const val COL_EMAIL = "email"
 const val COL_PASSWORD = "password"
-const val TABLE_FURNITURE_DATA = "FurnitureData"
+const val TABLE_FURNITURE = "favoritesTable"
 const val COL_FURNITURE_ID = "furnitureID"
 const val COL_FURNITURE_NAME = "furnitureName"
 const val COL_IMAGE_PATH = "imagePath"
-const val COL_FURNITURE_DETAILS = "furnitureDetails"
 const val COL_CATEGORY = "category"
+const val COL_PRICE = "itemPrice"
+const val COL_FAV_STATUS = "favStatus"
 
 class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 1) {
 
@@ -31,17 +32,18 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 
                 "$COL_PASSWORD TEXT)")
 
         db?.execSQL("CREATE TABLE " +
-                "$TABLE_FURNITURE_DATA (" +
-                "$COL_FURNITURE_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "$TABLE_FURNITURE (" +
+                "$COL_FURNITURE_ID TEXT PRIMARY KEY, " +
                 "$COL_CATEGORY TEXT, " +
+                "$COL_IMAGE_PATH INT, " +
                 "$COL_FURNITURE_NAME TEXT, " +
-                "$COL_FURNITURE_DETAILS TEXT, " +
-                "$COL_IMAGE_PATH TEXT)")
+                "$COL_PRICE DOUBLE, " +
+                "$COL_FAV_STATUS TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_USERDATA")
-        db?.execSQL("DROP TABLE IF EXISTS $TABLE_FURNITURE_DATA")
+        db?.execSQL("DROP TABLE IF EXISTS $TABLE_FURNITURE")
 
         onCreate(db)
     }
@@ -94,41 +96,77 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 
         return result != -1
     }
 
-    fun updateName(currentEmail: String, newName: String): Boolean {
+    fun updateUserNameByEmail(email: String, newName: String): Boolean {
+        if (email.isBlank() || newName.isBlank()) {
+            return false
+        }
+
         val db = this.writableDatabase
         val contentValues = ContentValues()
         contentValues.put(COL_USERNAME, newName)
 
-        val result = db.update(TABLE_USERDATA, contentValues, "$COL_EMAIL = ?", arrayOf(currentEmail))
+        val result = db.update(TABLE_USERDATA, contentValues, "$COL_EMAIL = ?", arrayOf(email))
         db.close()
 
         return result != -1
     }
 
-    fun updateEmail(currentEmail: String, newEmail: String): Boolean {
+    fun insertFurnitureData(id: String, category: String, imagePath: Int, itemName: String, price: Double, favStatus: String) {
         val db = this.writableDatabase
-        val contentValues = ContentValues()
-        contentValues.put(COL_EMAIL, newEmail)
 
-        val result = db.update(TABLE_USERDATA, contentValues, "$COL_EMAIL = ?", arrayOf(currentEmail))
-        db.close()
+        val existingRecordCursor = db.rawQuery("SELECT * FROM $TABLE_FURNITURE WHERE $COL_FURNITURE_ID = ?", arrayOf(id))
 
-        return result != -1
+        if (existingRecordCursor.count > 0) {
+            val contentValues = ContentValues()
+            contentValues.put(COL_CATEGORY, category)
+            contentValues.put(COL_IMAGE_PATH, imagePath)
+            contentValues.put(COL_FURNITURE_NAME, itemName)
+            contentValues.put(COL_PRICE, price)
+            contentValues.put(COL_FAV_STATUS, favStatus)
+
+            db.update(TABLE_FURNITURE, contentValues, "$COL_FURNITURE_ID = ?", arrayOf(id))
+        } else {
+
+            val contentValues = ContentValues()
+            contentValues.put(COL_FURNITURE_ID, id)
+            contentValues.put(COL_CATEGORY, category)
+            contentValues.put(COL_IMAGE_PATH, imagePath)
+            contentValues.put(COL_FURNITURE_NAME, itemName)
+            contentValues.put(COL_PRICE, price)
+            contentValues.put(COL_FAV_STATUS, favStatus)
+
+            db.insert(TABLE_FURNITURE, null, contentValues)
+        }
+
+        existingRecordCursor.close()
     }
 
-    fun insertFurniture(category: String, name: String, details: String, imagePath: String): Boolean {
-        val db = this.writableDatabase
-        val contentValues = ContentValues()
-        contentValues.put(COL_CATEGORY, category)
-        contentValues.put(COL_FURNITURE_NAME, name)
-        contentValues.put(COL_FURNITURE_DETAILS, details)
-        contentValues.put(COL_IMAGE_PATH, imagePath)
-
-        val result = db.insert(TABLE_FURNITURE_DATA, null, contentValues)
-        db.close()
-
-        return result != -1L
+    fun readAllFurnitureData(id: String): Cursor {
+        val db = this.readableDatabase
+        val query = "SELECT * FROM $TABLE_FURNITURE WHERE $COL_FURNITURE_ID = $id"
+        return db.rawQuery(query, null, null)
     }
+
+    fun removeFromFaves(id: String) {
+        val db = this.writableDatabase
+        val query = "UPDATE $TABLE_FURNITURE SET $COL_FAV_STATUS='0' WHERE $COL_FURNITURE_ID=$id"
+        db.execSQL(query)
+    }
+
+    fun selectAllFaves(): Cursor {
+        val db = this.readableDatabase
+        val query = "SELECT * FROM $TABLE_FURNITURE WHERE $COL_FAV_STATUS = '1'"
+        return db.rawQuery(query, null, null)
+    }
+
+
+
+
+
+
+
+
+
 
     fun getUserData(): List<User> {
         val userList = mutableListOf<User>()
@@ -149,4 +187,21 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "IVDatabase", null, 
         db.close()
         return userList
     }
+
+    fun getUserIdByEmail(email: String): Int {
+        val db = readableDatabase
+        val query = "SELECT $COL_USERID FROM $TABLE_USERDATA WHERE $COL_EMAIL = ?"
+        val cursor = db.rawQuery(query, arrayOf(email))
+        var userId = -1 // Default value to indicate user not found
+
+        if (cursor.moveToFirst()) {
+            userId = cursor.getInt(0) // Assuming COL_USERID is the first column (index 0)
+        }
+
+        cursor.close()
+        db.close()
+
+        return userId
+    }
+
 }

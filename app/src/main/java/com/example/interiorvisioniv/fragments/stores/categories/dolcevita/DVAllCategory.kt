@@ -19,10 +19,7 @@ class DVAllCategory: Fragment(R.layout.fragment_dv_allcategory) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,60 +31,28 @@ class DVAllCategory: Fragment(R.layout.fragment_dv_allcategory) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
+        furnituresArrayList.add(Furnitures("17", "Chair", R.drawable.chair5, "Occasional Chair", 10900.00, "0"))
+        furnituresArrayList.add(Furnitures("18", "Decor", R.drawable.decorlamp1, "LuxuryWood Illuminare", 20875.00, "0"))
+        furnituresArrayList.add(Furnitures("19", "Decor", R.drawable.decorlamp2, "Charcoal Jungle Lamp", 14057.30, "0"))
+        furnituresArrayList.add(Furnitures("20", "Decor", R.drawable.plant3, "Jade Plant", 14404.34, "0"))
+        furnituresArrayList.add(Furnitures("21", "Decor", R.drawable.vase3, "Cranes in Flight Duo Vases", 1000.34, "0"))
+        furnituresArrayList.add(Furnitures("22", "Sofa", R.drawable.sofa5, "Retro Sofa", 5000.00, "0"))
+        furnituresArrayList.add(Furnitures("23", "Sofa", R.drawable.sectional1, "Zin Home Sofa", 15999.50, "0"))
+        furnituresArrayList.add(Furnitures("24", "Sofa", R.drawable.sectional2, "Joybird Sofa", 10500.50, "0"))
+        furnituresArrayList.add(Furnitures("25", "Sofa", R.drawable.loveseat1, "English Loveseat Sofa", 66866.00, "0"))
+        furnituresArrayList.add(Furnitures("26", "Sofa", R.drawable.loveseat2, "Roll Arm Sofa", 20500.00, "0"))
+        furnituresArrayList.add(Furnitures("27", "Table", R.drawable.coffeetable2, "Haven Coffee Table", 124500.00, "0"))
+        furnituresArrayList.add(Furnitures("28", "Table", R.drawable.coffeetable3, "Wooden Circular Coffee Table", 9020.00, "0"))
+        furnituresArrayList.add(Furnitures("29", "Table", R.drawable.consoletable2, "Design District Console Table", 6600.34, "0"))
+        furnituresArrayList.add(Furnitures("30", "Table", R.drawable.consoletable3, "Shanxi Charm Console", 5871.00, "0"))
+        furnituresArrayList.add(Furnitures("31", "Table", R.drawable.endtable6, "Brithny End Table", 3506.51, "0"))
+
     }
-    private fun dataInitialize(){
-
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.chair5,
-            R.drawable.decorlamp1,
-            R.drawable.decorlamp2,
-            R.drawable.plant3,
-            R.drawable.vase3,
-            R.drawable.sofa5,
-            R.drawable.sectional1,
-            R.drawable.sectional2,
-            R.drawable.loveseat1,
-            R.drawable.loveseat2,
-            R.drawable.coffeetable2,
-            R.drawable.coffeetable3,
-            R.drawable.consoletable2,
-            R.drawable.consoletable3,
-            R.drawable.endtable6
-        )
-
-        nameId = arrayOf(
-            "Occasional Chair",
-            "LuxuryWood Illuminare",
-            "Charcoal Jungle Lamp",
-            "High Polymer Jade Plant",
-            "Cranes in Flight Duo Vases",
-            "Retro Sofa",
-            "Zin Home Sofa",
-            "JoyBird Sofa",
-            "English Roll Arm Loveseat Sofa",
-            "English Roll Arm Sofa",
-            "Haven Coffee Table",
-            "Wooden Circular Coffee Table",
-            "Design District Console Table",
-            "Shanxi Charm Console",
-            "Brithny End Table"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
-    }
-
 }

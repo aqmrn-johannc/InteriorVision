@@ -11,6 +11,7 @@ import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.databinding.FragmentCiTablesBinding
+import com.example.interiorvisioniv.databinding.FragmentDvAllcategoryBinding
 import com.example.interiorvisioniv.databinding.FragmentDvTablesBinding
 
 class DVTablesCategory: Fragment(R.layout.fragment_dv_tables) {
@@ -18,10 +19,7 @@ class DVTablesCategory: Fragment(R.layout.fragment_dv_tables) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,39 +31,18 @@ class DVTablesCategory: Fragment(R.layout.fragment_dv_tables) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
-    }
-    private fun dataInitialize(){
+        furnituresArrayList.add(Furnitures("27", "Table", R.drawable.coffeetable2, "Haven Coffee Table", 124500.00, "0"))
+        furnituresArrayList.add(Furnitures("28", "Table", R.drawable.coffeetable3, "Wooden Circular Coffee Table", 9020.00, "0"))
+        furnituresArrayList.add(Furnitures("29", "Table", R.drawable.consoletable2, "Design District Console Table", 6600.34, "0"))
+        furnituresArrayList.add(Furnitures("30", "Table", R.drawable.consoletable3, "Shanxi Charm Console", 5871.00, "0"))
+        furnituresArrayList.add(Furnitures("31", "Table", R.drawable.endtable6, "Brithny End Table", 3506.51, "0"))
 
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.coffeetable2,
-            R.drawable.coffeetable3,
-            R.drawable.consoletable2,
-            R.drawable.consoletable3,
-            R.drawable.endtable6
-        )
-
-        nameId = arrayOf(
-            "Haven Coffee Table",
-            "Wooden Circular Coffee Table",
-            "Design District Console Table",
-            "Shanxi Charm Console",
-            "Brithny End Table"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
     }
 }

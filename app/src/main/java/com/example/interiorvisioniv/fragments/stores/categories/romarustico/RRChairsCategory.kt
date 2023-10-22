@@ -34,38 +34,38 @@ class RRChairsCategory: Fragment(R.layout.fragment_rr_chairs) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
-        val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
-        recyclerView.adapter = adapter
+//        dataInitialize()
+//        val layoutManager = LinearLayoutManager(context)
+//        recyclerView = view.findViewById(R.id.recycler_view)
+//        recyclerView.layoutManager = layoutManager
+//        recyclerView.setHasFixedSize(true)
+//        adapter = FurnitureAdapter(furnituresArrayList)
+//        recyclerView.adapter = adapter
 
     }
     private fun dataInitialize(){
 
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-            R.drawable.iv_logo1,
-        )
-
-        nameId = arrayOf(
-            getString(R.string.roma1),
-            getString(R.string.roma2),
-            getString(R.string.roma3),
-            getString(R.string.roma4)
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
+//        furnituresArrayList = arrayListOf<Furnitures>()
+//
+//        imageId = arrayOf(
+//            R.drawable.iv_logo1,
+//            R.drawable.iv_logo1,
+//            R.drawable.iv_logo1,
+//            R.drawable.iv_logo1,
+//        )
+//
+//        nameId = arrayOf(
+//            getString(R.string.roma1),
+//            getString(R.string.roma2),
+//            getString(R.string.roma3),
+//            getString(R.string.roma4)
+//        )
+//
+//        for (i in imageId.indices){
+//
+//            val furnitures = Furnitures(imageId[i],nameId[i])
+//            furnituresArrayList.add(furnitures)
+//        }
     }
 
 }

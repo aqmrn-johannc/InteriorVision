@@ -11,6 +11,7 @@ import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.databinding.FragmentDvDecorsBinding
+import com.example.interiorvisioniv.databinding.FragmentMmAllcategoryBinding
 import com.example.interiorvisioniv.databinding.FragmentMmDecorsBinding
 
 class MMDecorsCategory: Fragment(R.layout.fragment_mm_decors) {
@@ -19,10 +20,7 @@ class MMDecorsCategory: Fragment(R.layout.fragment_mm_decors) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,40 +32,19 @@ class MMDecorsCategory: Fragment(R.layout.fragment_mm_decors) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
+        furnituresArrayList.add(Furnitures("32", "Decor", R.drawable.vase4, "Ancient Vase", 10900.00, "0"))
+        furnituresArrayList.add(Furnitures("33", "Decor", R.drawable.vase5, "Gilded Elegance Vase", 20875.00, "0"))
+        furnituresArrayList.add(Furnitures("34", "Decor", R.drawable.plant4, "Zen Skimmia", 9800.00, "0"))
+        furnituresArrayList.add(Furnitures("35", "Decor", R.drawable.decorlamp3, "Opulent Marble Lamp", 14404.34, "0"))
+        furnituresArrayList.add(Furnitures("36", "Decor", R.drawable.decorlamp4, "Botanical Lamp", 1000.34, "0"))
+
+
     }
-    private fun dataInitialize(){
-
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.vase4,
-            R.drawable.vase5,
-            R.drawable.plant4,
-            R.drawable.decorlamp3,
-            R.drawable.decorlamp4
-        )
-
-        nameId = arrayOf(
-            "Ancient Vase",
-            "Gilded Elegance Vase",
-            "Zen Skimmia",
-            "Opulent Marble Lamp",
-            "Botanical Lamp"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
-    }
-
 }

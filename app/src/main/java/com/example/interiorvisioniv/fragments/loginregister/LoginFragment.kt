@@ -87,10 +87,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 val checkUser = db.checkUser(email, password)
                 Log.d("LoginFragment", "Email: $email, Password: $password")
                 if (checkUser) {
-                    val bundle = Bundle()
-                    bundle.putString("userEmail", email)
-                    val accountSettingsFragment = AccountSettingsFragment()
-                    accountSettingsFragment.arguments = bundle
 
                     if (binding.cbRememberMe.isChecked) {
                         editor.putString("email", email)

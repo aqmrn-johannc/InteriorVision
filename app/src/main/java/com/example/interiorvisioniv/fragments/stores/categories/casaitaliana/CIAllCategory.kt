@@ -19,10 +19,7 @@ class CIAllCategory: Fragment(R.layout.fragment_ci_allcategory) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,62 +31,29 @@ class CIAllCategory: Fragment(R.layout.fragment_ci_allcategory) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
-    }
-    private fun dataInitialize(){
-        Log.d("TAG", "Inside dataInitialize()")
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.chair1,
-            R.drawable.chair2,
-            R.drawable.chair3,
-            R.drawable.chair4,
-            R.drawable.vase1,
-            R.drawable.vase2,
-            R.drawable.plants1,
-            R.drawable.plants2,
-            R.drawable.sofa1,
-            R.drawable.sofa2,
-            R.drawable.sofa3,
-            R.drawable.sofa4,
-            R.drawable.endtable1,
-            R.drawable.endtable2,
-            R.drawable.consoletable1,
-            R.drawable.coffeetable1
-        )
-
-        nameId = arrayOf(
-            "Berge Chair",
-            "Barrel Chair",
-            "Mid-Century Chair",
-            "Slipper Chair",
-            "Rawscan Vase",
-            "Hydria Apotechary Vase",
-            "Potted Montsera Deliciosa",
-            "Prayer Plant",
-            "Tuxedo Sofa",
-            "Track Arm Lawson",
-            "Chesterfield Sofa",
-            "Lawson",
-            "Sakcham End Table",
-            "Retro Box End Table",
-            "Simple Console Table",
-            "Victorian Coffee Table"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
+        furnituresArrayList.add(Furnitures("1", "Chair", R.drawable.chair1, "Berge Chair", 17800.00, "0"))
+        furnituresArrayList.add(Furnitures("2", "Chair", R.drawable.chair2, "Barrel Chair", 20875.00, "0"))
+        furnituresArrayList.add(Furnitures("3", "Chair", R.drawable.chair3, "Mid-Century Chair", 14057.30, "0"))
+        furnituresArrayList.add(Furnitures("4", "Chair", R.drawable.chair4, "Slipper Chair", 14404.34, "0"))
+        furnituresArrayList.add(Furnitures("5", "Decor", R.drawable.vase1, "Rawscan Vase", 1000.34, "0"))
+        furnituresArrayList.add(Furnitures("6", "Decor", R.drawable.vase2, "Hydria Apothecary Vase", 5000.00, "0"))
+        furnituresArrayList.add(Furnitures("7", "Decor", R.drawable.plants1, "Potted Montsera Deliciosa", 1099.50, "0"))
+        furnituresArrayList.add(Furnitures("8", "Decor", R.drawable.plants2, "Prayer Plant", 999.50, "0"))
+        furnituresArrayList.add(Furnitures("9", "Sofa", R.drawable.sofa1, "Tuxedo Sofa", 66866.00, "0"))
+        furnituresArrayList.add(Furnitures("10", "Sofa", R.drawable.sofa2, "Track Arm Lawson", 34307.00, "0"))
+        furnituresArrayList.add(Furnitures("11", "Sofa", R.drawable.sofa3, "Chesterfield Sofa", 124500.00, "0"))
+        furnituresArrayList.add(Furnitures("12", "Sofa", R.drawable.sofa4, "Lawson", 39020.00, "0"))
+        furnituresArrayList.add(Furnitures("13", "Table", R.drawable.endtable1, "Sakcham End Table", 6600.34, "0"))
+        furnituresArrayList.add(Furnitures("14", "Table", R.drawable.endtable2, "Retro Box End Table", 5871.00, "0"))
+        furnituresArrayList.add(Furnitures("15", "Table", R.drawable.consoletable1, "Simple Console Table", 3506.51, "0"))
+        furnituresArrayList.add(Furnitures("16", "Table", R.drawable.coffeetable1, "Victorian Coffee Table", 2889.60, "0"))
     }
 
 }

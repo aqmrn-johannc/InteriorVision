@@ -11,6 +11,7 @@ import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.databinding.FragmentCiChairsBinding
+import com.example.interiorvisioniv.databinding.FragmentDvAllcategoryBinding
 import com.example.interiorvisioniv.databinding.FragmentDvChairsBinding
 
 class DVChairsCategory: Fragment(R.layout.fragment_dv_chairs) {
@@ -19,10 +20,7 @@ class DVChairsCategory: Fragment(R.layout.fragment_dv_chairs) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,32 +32,14 @@ class DVChairsCategory: Fragment(R.layout.fragment_dv_chairs) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
+        furnituresArrayList.add(Furnitures("17", "Chair", R.drawable.chair5, "Occasional Chair", 10900.00, "0"))
+
     }
-    private fun dataInitialize(){
-
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.chair5
-        )
-
-        nameId = arrayOf(
-            "Occasional Chair"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
-    }
-
 }

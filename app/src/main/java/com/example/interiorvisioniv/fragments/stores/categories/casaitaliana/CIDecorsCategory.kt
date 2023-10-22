@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
+import com.example.interiorvisioniv.databinding.FragmentCiAllcategoryBinding
 import com.example.interiorvisioniv.databinding.FragmentCiChairsBinding
 import com.example.interiorvisioniv.databinding.FragmentCiDecorsBinding
 
@@ -19,10 +20,7 @@ class CIDecorsCategory: Fragment(R.layout.fragment_ci_decors) {
 
     private lateinit var  adapter : FurnitureAdapter
     private lateinit var  recyclerView: RecyclerView
-    private lateinit var furnituresArrayList : ArrayList<Furnitures>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
+    private var furnituresArrayList = ArrayList<Furnitures>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,38 +32,18 @@ class CIDecorsCategory: Fragment(R.layout.fragment_ci_decors) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = FurnitureAdapter(furnituresArrayList)
+        adapter = FurnitureAdapter(furnituresArrayList, requireContext())
         recyclerView.adapter = adapter
 
-    }
-    private fun dataInitialize(){
+        furnituresArrayList.add(Furnitures("5", "Decor", R.drawable.vase1, "Rawscan Vase", 1000.34, "0"))
+        furnituresArrayList.add(Furnitures("6", "Decor", R.drawable.vase2, "Hydria Apothecary Vase", 5000.00, "0"))
+        furnituresArrayList.add(Furnitures("7", "Decor", R.drawable.plants1, "Potted Montsera Deliciosa", 1099.50, "0"))
+        furnituresArrayList.add(Furnitures("8", "Decor", R.drawable.plants2, "Prayer Plant", 999.50, "0"))
 
-        furnituresArrayList = arrayListOf<Furnitures>()
-
-        imageId = arrayOf(
-            R.drawable.vase1,
-            R.drawable.vase2,
-            R.drawable.plants1,
-            R.drawable.plants2
-        )
-
-        nameId = arrayOf(
-            "Rawscan Vase",
-            "Hydria Apotechary Vase",
-            "Potted Montsera Deliciosa",
-            "Prayer Plant"
-        )
-
-        for (i in imageId.indices){
-
-            val furnitures = Furnitures(imageId[i],nameId[i])
-            furnituresArrayList.add(furnitures)
-        }
     }
 
 }
