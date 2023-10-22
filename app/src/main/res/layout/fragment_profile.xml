@@ -20,6 +20,12 @@
         android:layout_marginTop="-25dp"
         app:cardCornerRadius="30dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/cardview_gradient"/>
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImageView"
             android:layout_width="90dp"
@@ -50,75 +56,6 @@
 
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:id="@+id/myPurchasesLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/cvProfile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/cart"
-            android:layout_marginEnd="8dp"
-            app:tint="#E6E6E6"/>
-
-        <Button
-            android:id="@+id/myPurchasesButton"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:text="My Purchases"
-            android:textSize="19sp"
-            android:textAlignment="textStart"
-            android:textColor="#E6E6E6"
-            android:fontFamily="@font/altersan_semibold"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="RtlCompat" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/myLikesLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingStart="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/myPurchasesLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/heart"
-            android:layout_marginEnd="8dp"
-            app:tint="#E6E6E6"/>
-
-        <Button
-            android:id="@+id/myLikesButton"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:text="My Likes"
-            android:textSize="19sp"
-            android:textAlignment="textStart"
-            android:textColor="#E6E6E6"
-            android:fontFamily="@font/altersan_semibold"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="RtlCompat" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/myAccountSettingsLayout"
@@ -127,7 +64,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingStart="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/myLikesLayout"
+        app:layout_constraintTop_toBottomOf="@id/cvProfile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp">

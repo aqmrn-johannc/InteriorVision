@@ -20,17 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="35dp"
-            android:background="#00000000"
-            android:scaleType="centerInside"
-            android:src="@drawable/back_button_white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,14 +27,26 @@
             android:orientation="vertical"
             android:background="@drawable/cardview_gradient">
 
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:background="#00000000"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gsosdisciples™"
-                android:textSize="30sp"
+                android:text="About Gsosdisciples™"
+                android:textSize="26sp"
                 android:textColor="#FFF"
                 android:fontFamily="@font/altersan_bold"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="-25dp"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -55,7 +56,7 @@
                 android:paddingStart="30dp"
                 android:textAlignment="center"
                 android:paddingEnd="30dp"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textColor="#FFF"
                 android:fontFamily="@font/altersan"
                 android:justificationMode="inter_word"
@@ -97,7 +98,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Johann Gene Custodio"
                 android:textColor="#FFF"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
@@ -110,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:text="Group Leader, &amp; frontend developer"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"
@@ -124,7 +125,7 @@
                 android:id="@+id/profileImageView1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/akshuali"
+                android:src="@drawable/akshuali4"
                 app:civ_border_color="#FFFFFF"
                 app:civ_border_width="3dp"
                 android:layout_marginTop="30dp"
@@ -136,7 +137,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Danielle Marie de Guzman"
                 android:textColor="#FFF"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
@@ -149,7 +150,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:text="Lead programmer, &amp; backend developer"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"
@@ -163,7 +164,7 @@
                 android:id="@+id/profileImageView2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/akshuali"
+                android:src="@drawable/akshuali3"
                 app:civ_border_color="#FFFFFF"
                 app:civ_border_width="3dp"
                 android:layout_marginTop="30dp"
@@ -175,7 +176,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Jean Collado"
                 android:textColor="#FFF"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
@@ -188,7 +189,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:text="Lead Resources Gatherer"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"
@@ -202,7 +203,7 @@
                 android:id="@+id/profileImageView3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/akshuali"
+                android:src="@drawable/akshuali5"
                 app:civ_border_color="#FFFFFF"
                 app:civ_border_width="3dp"
                 android:layout_marginTop="30dp"
@@ -214,7 +215,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Christian Jabez Ausena"
                 android:textColor="#FFF"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
@@ -227,7 +228,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:text="Assistant frontend developer"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"
@@ -241,7 +242,7 @@
                 android:id="@+id/profileImageView4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/akshuali"
+                android:src="@drawable/akshuali2"
                 app:civ_border_color="#FFFFFF"
                 app:civ_border_width="3dp"
                 android:layout_marginTop="30dp"
@@ -253,7 +254,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Dexter Lowie Iglesias"
                 android:textColor="#FFF"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
@@ -266,7 +267,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi."
+                android:text="Assistant Resources Gatherer"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="15sp"

@@ -16,7 +16,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="-25dp"
-        app:cardCornerRadius="23dp">
+        app:cardCornerRadius="23dp"
+        android:shadowColor="#000000"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/cardview_gradient"/>
 
         <TextView
             android:id="@+id/usernameTextView"

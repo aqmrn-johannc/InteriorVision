@@ -38,7 +38,9 @@
         tools:layout="@layout/fragment_cart" >
         <action
             android:id="@+id/action_cartFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -47,7 +49,9 @@
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_to_aboutUsFragment"
-            app:destination="@id/aboutUsFragment" />
+            app:destination="@id/aboutUsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_profileFragment_to_helpCenterFragment"
             app:destination="@id/helpCenterFragment"
@@ -55,7 +59,9 @@
             app:exitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_profileFragment_to_accountSettingsFragment"
-            app:destination="@id/accountSettingsFragment" />
+            app:destination="@id/accountSettingsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -73,7 +79,9 @@
         tools:layout="@layout/fragment_casa_italiana" >
         <action
             android:id="@+id/action_casaItalianaFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/modelMiselloFragment"
@@ -82,7 +90,9 @@
         tools:layout="@layout/fragment_model_misello" >
         <action
             android:id="@+id/action_modelMiselloFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/dolceVitaFragment"
@@ -91,7 +101,9 @@
         tools:layout="@layout/fragment_dolce_vita" >
         <action
             android:id="@+id/action_dolceVitaFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/romaRusticoFragment"
@@ -100,7 +112,9 @@
         tools:layout="@layout/fragment_roma_rustico" >
         <action
             android:id="@+id/action_romaRusticoFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/aboutUsFragment"
@@ -109,7 +123,9 @@
         tools:layout="@layout/fragment_about_us" >
         <action
             android:id="@+id/action_aboutUsFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/helpCenterFragment"
@@ -129,16 +145,24 @@
         tools:layout="@layout/fragment_account_settings" >
         <action
             android:id="@+id/action_accountSettingsFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_accountSettingsFragment_to_editEmailFragment"
-            app:destination="@id/editEmailFragment" />
+            app:destination="@id/editEmailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_accountSettingsFragment_to_editNameFragment"
-            app:destination="@id/editNameFragment" />
+            app:destination="@id/editNameFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_accountSettingsFragment_to_changePasswordFragment"
-            app:destination="@id/changePasswordFragment" />
+            app:destination="@id/changePasswordFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/editEmailFragment"
@@ -147,7 +171,9 @@
         tools:layout="@layout/fragment_edit_email" >
         <action
             android:id="@+id/action_editEmailFragment_to_accountSettingsFragment"
-            app:destination="@id/accountSettingsFragment" />
+            app:destination="@id/accountSettingsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/editNameFragment"
@@ -156,7 +182,9 @@
         tools:layout="@layout/fragment_edit_name" >
         <action
             android:id="@+id/action_editNameFragment_to_accountSettingsFragment"
-            app:destination="@id/accountSettingsFragment" />
+            app:destination="@id/accountSettingsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/changePasswordFragment"
@@ -165,6 +193,8 @@
         tools:layout="@layout/fragment_change_password" >
         <action
             android:id="@+id/action_changePasswordFragment_to_accountSettingsFragment"
-            app:destination="@id/accountSettingsFragment" />
+            app:destination="@id/accountSettingsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
 </navigation>

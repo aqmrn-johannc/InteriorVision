@@ -1,28 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_edit_name"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.profilePage.EditEmailFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="-20dp"
+        app:cardBackgroundColor="#3D1B77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/cardview_gradient"/>
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="45dp"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_button_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="backButton" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Email"
+            android:textSize="33sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/altersan_bold"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="7"
+            android:shadowRadius="15"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/welcomebg"/>
 
     <EditText
         android:id="@+id/etNewEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
         android:layout_marginTop="80dp"
-        android:hint="Enter email"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Enter new email"
+        android:textColor="#222222"
+        android:textColorHint="#808080"
+        android:textSize="15sp"
+        android:paddingStart="30dp"
+        android:background="@drawable/etlogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/cvTitle" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNewEmail" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

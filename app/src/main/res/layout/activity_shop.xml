@@ -22,7 +22,7 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#9554F1"
+        android:background="@drawable/cardview_gradient"
         android:backgroundTint="#FFFFFF"
         app:itemIconTint="#FFFFFF"
         android:elevation="0dp"

@@ -38,6 +38,10 @@ class EditNameFragment : Fragment() {
         val receivedBundle = arguments
         val userEmail = receivedBundle?.getString("userEmail") // Replace "key" with the key you used in the activity
 
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_editNameFragment_to_accountSettingsFragment)
+        }
+
         if (userEmail != null) {
             btnSave.setOnClickListener {
 
@@ -60,7 +64,6 @@ class EditNameFragment : Fragment() {
                     } else {
                         Toast.makeText(requireContext(), "Name cannot be empty", Toast.LENGTH_SHORT).show()
                     }
-
 
                 }
             }
