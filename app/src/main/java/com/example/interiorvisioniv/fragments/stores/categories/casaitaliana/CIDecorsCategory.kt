@@ -1,5 +1,6 @@
 package com.example.interiorvisioniv.fragments.stores.categories.casaitaliana
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.interiorvisioniv.R
+import com.example.interiorvisioniv.activities.ProductDetailsActivity
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.databinding.FragmentCiAllcategoryBinding
@@ -44,6 +46,10 @@ class CIDecorsCategory: Fragment(R.layout.fragment_ci_decors) {
         furnituresArrayList.add(Furnitures("7", "Decor", R.drawable.plants1, "Potted Montsera Deliciosa", 1099.50, "0"))
         furnituresArrayList.add(Furnitures("8", "Decor", R.drawable.plants2, "Prayer Plant", 999.50, "0"))
 
+        adapter.onItemClick = {
+            val intent = Intent(context, ProductDetailsActivity::class.java)
+            intent.putExtra("product", it)
+            startActivity(intent)
+        }
     }
-
 }

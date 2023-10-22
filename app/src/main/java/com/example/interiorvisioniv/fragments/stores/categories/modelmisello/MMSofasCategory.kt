@@ -1,5 +1,6 @@
 package com.example.interiorvisioniv.fragments.stores.categories.modelmisello
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.interiorvisioniv.R
+import com.example.interiorvisioniv.activities.ProductDetailsActivity
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.databinding.FragmentDvSofasBinding
@@ -46,5 +48,10 @@ class MMSofasCategory: Fragment(R.layout.fragment_mm_sofas) {
         furnituresArrayList.add(Furnitures("41", "Sofa", R.drawable.loveseat5, "Sofa Bed", 20500.00, "0"))
 
 
+        adapter.onItemClick = {
+            val intent = Intent(context, ProductDetailsActivity::class.java)
+            intent.putExtra("product", it)
+            startActivity(intent)
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.interiorvisioniv.fragments.stores.categories.dolcevita
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.interiorvisioniv.R
+import com.example.interiorvisioniv.activities.ProductDetailsActivity
 import com.example.interiorvisioniv.adapters.FurnitureAdapter
 import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.databinding.FragmentCiChairsBinding
@@ -41,5 +43,10 @@ class DVChairsCategory: Fragment(R.layout.fragment_dv_chairs) {
 
         furnituresArrayList.add(Furnitures("17", "Chair", R.drawable.chair5, "Occasional Chair", 10900.00, "0"))
 
+        adapter.onItemClick = {
+            val intent = Intent(context, ProductDetailsActivity::class.java)
+            intent.putExtra("product", it)
+            startActivity(intent)
+        }
     }
 }

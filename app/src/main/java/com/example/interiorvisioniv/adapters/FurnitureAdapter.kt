@@ -22,6 +22,7 @@ import com.google.android.material.imageview.ShapeableImageView
 class FurnitureAdapter(private val furnitureList : ArrayList<Furnitures>, private val context: Context) : RecyclerView.Adapter<FurnitureAdapter.MyViewHolder>() {
 
     private lateinit var db: DBHelper
+    var onItemClick: ((Furnitures) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         db = DBHelper(context)
@@ -62,14 +63,16 @@ class FurnitureAdapter(private val furnitureList : ArrayList<Furnitures>, privat
                 holder.btFavorite.setBackgroundResource(R.drawable.favorite_border)
             }
         }
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(furnitureItem)
+        }
     }
 
 
     override fun getItemCount(): Int {
         return furnitureList.size
     }
-
-
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView)
     {
         val furnitureImage : ShapeableImageView = itemView.findViewById(R.id.furniture_image)
