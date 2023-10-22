@@ -7,17 +7,283 @@
     android:background="#3D1B77"
     tools:context=".fragments.profilePage.HelpCenterFragment">
 
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="35dp"
-        android:background="#00000000"
-        android:scaleType="centerInside"
-        android:src="@drawable/back_button_white"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/helpcentre"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="-10dp"
+        app:cardBackgroundColor="#3D1B77"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/cardview_gradient3">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:background="#00000000"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_button_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help Centre"
+                android:textSize="32sp"
+                android:textColor="#FFF"
+                android:fontFamily="@font/altersan_bold"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:shadowColor="#BE000000"
+                android:shadowRadius="10"
+                android:shadowDy="10"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="615dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/howcanwehelp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Hi, how can we help you?"
+            android:fontFamily="@font/altersan_semibold"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:shadowColor="#BE000000"
+            android:shadowRadius="10"
+            android:shadowDy="10"/>
+
+        <TextView
+            android:id="@+id/tvsearchbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toBottomOf="@id/howcanwehelp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:text="Search"
+            android:fontFamily="@font/altersan"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:paddingStart="60dp"/>
+
+        <ImageView
+            android:id="@+id/searchicon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#393939"
+            android:layout_marginTop="75dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/faqheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvsearchbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Frequently Asked Questions (FAQs)"
+            android:textAlignment="center"
+            android:fontFamily="@font/altersan_semibold"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:background="#3D1B77"
+            android:padding="18dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="415dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:background="@drawable/welcomebg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/faqview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/faq1header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:text="How do I log out my account?"
+                android:fontFamily="@font/altersan_semibold"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:textColor="#252525"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintBottom_toBottomOf="@id/faq1header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="#252525"
+                android:text="Users can navigate to Profile in the bottom navigation bar and look for the log out button at the bottom right part of the screen."
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/faq2header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/faq1header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:text="Is the app's database online-based?"
+                android:fontFamily="@font/altersan_semibold"
+                android:textSize="24sp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:textColor="#252525"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintBottom_toBottomOf="@id/faq2header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="#252525"
+                android:text="The answer is no, becuase app uses a local-based database named SQLite."
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/faq3header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/faq2header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:text="Can i keep my credentials logged in?"
+                android:fontFamily="@font/altersan_semibold"
+                android:textSize="23sp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:textColor="#252525"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintBottom_toBottomOf="@id/faq3header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="#252525"
+                android:text="Users can simply check the box at the login page with the description REMEMBER ME ,in order to save the login information while relaunching the app."
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/faq4header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/faq3header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:text="Does this app takes real currency?"
+                android:fontFamily="@font/altersan_semibold"
+                android:textSize="24sp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:textColor="#252525"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintBottom_toBottomOf="@id/faq4header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="#252525"
+                android:text="Abosolutely no. This app is intended for entertainment and educational purposes only. And all of the transactions are only simulations."
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/faq5header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/faq4header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:text="Is this app available to IOS?"
+                android:fontFamily="@font/altersan_semibold"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:paddingStart="30dp"
+                android:textColor="#252525"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                app:layout_constraintBottom_toBottomOf="@id/faq5header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="#252525"
+                android:text="This app is not currently available on IOS platform."
+                android:textSize="14sp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

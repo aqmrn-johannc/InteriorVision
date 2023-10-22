@@ -80,7 +80,7 @@ class MMAllCategory: Fragment(R.layout.fragment_mm_allcategory) {
             "Batchelor's Legacy Console Table",
             "Retasha End Table",
             "Cage Wire End Table",
-            "Pebble End Table"
+            "Pebble End Table",
         )
 
         for (i in imageId.indices){
