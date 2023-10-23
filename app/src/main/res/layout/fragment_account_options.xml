@@ -33,7 +33,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="440dp"
         android:layout_height="500dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="515dp"
         app:cardBackgroundColor="#3D1B77"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
