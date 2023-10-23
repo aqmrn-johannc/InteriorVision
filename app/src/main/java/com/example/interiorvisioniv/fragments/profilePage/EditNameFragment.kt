@@ -32,42 +32,42 @@ class EditNameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        db = DBHelper(requireContext())
-        etNewName = view.findViewById(R.id.etNewName)
-        btnSave = view.findViewById(R.id.btnSave)
-        val receivedBundle = arguments
-        val userEmail = receivedBundle?.getString("userEmail") // Replace "key" with the key you used in the activity
+//        db = DBHelper(requireContext())
+//        etNewName = view.findViewById(R.id.etNewName)
+//        btnSave = view.findViewById(R.id.btnSave)
+//        val receivedBundle = arguments
+//        val userEmail = receivedBundle?.getString("userEmail") // Replace "key" with the key you used in the activity
 
         binding.btnBack.setOnClickListener {
             findNavController().navigate(R.id.action_editNameFragment_to_accountSettingsFragment)
         }
 
-        if (userEmail != null) {
-            btnSave.setOnClickListener {
-
-                db = DBHelper(requireContext())
-                etNewName = view.findViewById(R.id.etNewName)
-                btnSave = view.findViewById(R.id.btnSave)
-
-                btnSave.setOnClickListener {
-                    val newName = etNewName.text.toString()
-
-                    if (newName.isNotEmpty()) {
-                        val isUpdated = db.updateUserNameByEmail(userEmail, newName)
-
-                        if (isUpdated) {
-                            Toast.makeText(requireContext(), "Successfully updated user's name", Toast.LENGTH_SHORT).show()
-                            findNavController().navigate(R.id.action_editNameFragment_to_accountSettingsFragment)
-                        } else {
-                            Toast.makeText(requireContext(), "Failed to update name", Toast.LENGTH_SHORT).show()
-                        }
-                    } else {
-                        Toast.makeText(requireContext(), "Name cannot be empty", Toast.LENGTH_SHORT).show()
-                    }
-
-                }
-            }
-        }
+//        if (userEmail != null) {
+//            btnSave.setOnClickListener {
+//
+//                db = DBHelper(requireContext())
+//                etNewName = view.findViewById(R.id.etNewName)
+//                btnSave = view.findViewById(R.id.btnSave)
+//
+//                btnSave.setOnClickListener {
+//                    val newName = etNewName.text.toString()
+//
+//                    if (newName.isNotEmpty()) {
+//                        val isUpdated = db.updateUserNameByEmail(userEmail, newName)
+//
+//                        if (isUpdated) {
+//                            Toast.makeText(requireContext(), "Successfully updated user's name", Toast.LENGTH_SHORT).show()
+//                            findNavController().navigate(R.id.action_editNameFragment_to_accountSettingsFragment)
+//                        } else {
+//                            Toast.makeText(requireContext(), "Failed to update name", Toast.LENGTH_SHORT).show()
+//                        }
+//                    } else {
+//                        Toast.makeText(requireContext(), "Name cannot be empty", Toast.LENGTH_SHORT).show()
+//                    }
+//
+//                }
+//            }
+//        }
 
 
     }

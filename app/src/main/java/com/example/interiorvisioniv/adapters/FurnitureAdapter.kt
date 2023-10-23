@@ -2,14 +2,11 @@ package com.example.interiorvisioniv.adapters
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
@@ -26,6 +23,7 @@ class FurnitureAdapter(private val furnitureList : ArrayList<Furnitures>, privat
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         db = DBHelper(context)
+
         var sp: SharedPreferences = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
         var firstStart = sp.getBoolean("firstStart", true)
         if (firstStart) {
@@ -90,7 +88,7 @@ class FurnitureAdapter(private val furnitureList : ArrayList<Furnitures>, privat
 
     private fun readCursorData(furnitureItem: Furnitures, holder: MyViewHolder) {
         var cursor = db.readAllFurnitureData(furnitureItem.itemId)
-        var db = db.readableDatabase
+        var myDB = db.readableDatabase
         try {
             while (cursor.moveToNext()){
                 var itemFavStatus = cursor.getString(cursor.getColumnIndexOrThrow(COL_FAV_STATUS))
@@ -106,7 +104,7 @@ class FurnitureAdapter(private val furnitureList : ArrayList<Furnitures>, privat
         } finally {
             if (cursor != null && cursor.isClosed) {
                 cursor.close()
-                db.close()
+                myDB.close()
             }
         }
     }

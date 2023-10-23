@@ -30,6 +30,7 @@ class FavoritesAdapter(private val favoriteList: ArrayList<FavItem>, private val
         holder.furnitureName.text = favoriteList[position].itemName
         holder.furnitureImage.setImageResource(favoriteList[position].itemImage)
         holder.furniturePrice.text = favoriteList[position].itemPrice.toString()
+        holder.btFavorite.setBackgroundResource(R.drawable.favorite_filled)
 
         holder.btFavorite.setOnClickListener {
             val favItem = favoriteList[position]
