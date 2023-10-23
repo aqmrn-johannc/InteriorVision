@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="170dp"
-            android:text="USERNAME"
+            android:text="Username"
             android:textSize="25sp"
             android:textColor="@color/white"
             android:fontFamily="@font/altersan_bold"

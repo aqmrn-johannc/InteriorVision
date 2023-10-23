@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Help Centre"
-                android:textSize="32sp"
+                android:textSize="30sp"
                 android:textColor="#FFF"
                 android:fontFamily="@font/altersan_bold"
                 android:layout_marginTop="35dp"
@@ -71,7 +71,7 @@
             android:text="Hi, how can we help you?"
             android:fontFamily="@font/altersan_semibold"
             android:textColor="@color/white"
-            android:textSize="28sp"
+            android:textSize="26sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp"
@@ -92,7 +92,7 @@
             android:background="#FFFFFF"
             android:text="Search"
             android:fontFamily="@font/altersan"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:padding="12dp"
             android:paddingStart="60dp"/>
 
@@ -118,7 +118,7 @@
             android:textAlignment="center"
             android:fontFamily="@font/altersan_semibold"
             android:textColor="@color/white"
-            android:textSize="27sp"
+            android:textSize="25sp"
             android:background="#3D1B77"
             android:padding="18dp"/>
 
@@ -150,7 +150,7 @@
                 android:background="@color/white"
                 android:text="How do I log out my account?"
                 android:fontFamily="@font/altersan_semibold"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:padding="10dp"
                 android:paddingStart="30dp"
                 android:textColor="#252525"/>
@@ -178,7 +178,7 @@
                 android:background="@color/white"
                 android:text="Is the app's database online-based?"
                 android:fontFamily="@font/altersan_semibold"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:padding="10dp"
                 android:paddingStart="30dp"
                 android:textColor="#252525"/>
@@ -206,7 +206,7 @@
                 android:background="@color/white"
                 android:text="Can i keep my credentials logged in?"
                 android:fontFamily="@font/altersan_semibold"
-                android:textSize="23sp"
+                android:textSize="22sp"
                 android:padding="10dp"
                 android:paddingStart="30dp"
                 android:textColor="#252525"/>
@@ -234,7 +234,7 @@
                 android:background="@color/white"
                 android:text="Does this app takes real currency?"
                 android:fontFamily="@font/altersan_semibold"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:padding="10dp"
                 android:paddingStart="30dp"
                 android:textColor="#252525"/>
@@ -262,7 +262,7 @@
                 android:background="@color/white"
                 android:text="Is this app available to IOS?"
                 android:fontFamily="@font/altersan_semibold"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:padding="10dp"
                 android:paddingStart="30dp"
                 android:textColor="#252525"/>

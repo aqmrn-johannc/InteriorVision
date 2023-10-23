@@ -135,15 +135,15 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="500dp"
                 android:layout_height="wrap_content"
                 android:text="Danielle Marie de Guzman"
                 android:textColor="#FFF"
+                android:textAlignment="center"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textSize="25sp"
                 android:fontFamily="@font/altersan_bold"
-                android:justificationMode="inter_word"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
 
