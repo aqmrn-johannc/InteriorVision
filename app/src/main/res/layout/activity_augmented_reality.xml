@@ -6,6 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".activities.AugmentedRealityActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvProfile"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:cardBackgroundColor="#3D1B77"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-25dp"
+        app:cardCornerRadius="23dp"
+        android:shadowColor="#000000"
+        android:shadowDx="7"
+        android:shadowDy="7"
+        android:shadowRadius="15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/cardview_gradient"/>
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="Place Furniture"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/altersan_semibold" />
+
+    </androidx.cardview.widget.CardView>
+
+
     <io.github.sceneview.ar.ArSceneView
         android:id="@+id/sceneview"
         android:layout_width="match_parent"
@@ -13,13 +48,20 @@
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
         android:text="Place"
-        android:textSize="15sp"
+        android:textSize="25sp"
+        android:fontFamily="@font/altersan_semibold"
+        android:textColor="@color/white"
+        android:backgroundTint="#BF51FB"
         android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toBottomOf="@+id/sceneview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="5"
+        android:shadowRadius="15"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
