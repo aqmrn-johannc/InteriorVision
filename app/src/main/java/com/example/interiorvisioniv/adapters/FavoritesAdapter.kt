@@ -14,6 +14,7 @@ import com.example.interiorvisioniv.R
 import com.example.interiorvisioniv.data.FavItem
 import com.example.interiorvisioniv.helper.DBHelper
 import com.google.android.material.imageview.ShapeableImageView
+import de.hdodenhof.circleimageview.CircleImageView
 
 class FavoritesAdapter(private val favoriteList: ArrayList<FavItem>, private val context: Context) : RecyclerView.Adapter<FavoritesAdapter.ViewHolder>() {
 

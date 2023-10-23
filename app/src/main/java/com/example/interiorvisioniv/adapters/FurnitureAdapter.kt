@@ -15,6 +15,7 @@ import com.example.interiorvisioniv.data.Furnitures
 import com.example.interiorvisioniv.helper.COL_FAV_STATUS
 import com.example.interiorvisioniv.helper.DBHelper
 import com.google.android.material.imageview.ShapeableImageView
+import de.hdodenhof.circleimageview.CircleImageView
 
 class FurnitureAdapter(private val furnitureList : ArrayList<Furnitures>, private val context: Context) : RecyclerView.Adapter<FurnitureAdapter.MyViewHolder>() {
 
